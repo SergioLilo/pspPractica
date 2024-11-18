@@ -7,6 +7,7 @@ public class WebCompraConciertos implements IOperacionesWeb{
 
 	private boolean venta = false;
 	int entradasDisponibles=0;
+	int entRest=0;
 	public WebCompraConciertos() {
 		super();
 	}
@@ -22,6 +23,7 @@ public class WebCompraConciertos implements IOperacionesWeb{
 				return false;
 			}
 			entradasDisponibles--;
+			entRest++;
 
 			System.out.println("[WebCompraConciertos] Entrada comprada. Entradas restantes: " + entradasDisponibles);
 
@@ -64,9 +66,10 @@ public class WebCompraConciertos implements IOperacionesWeb{
 	@Override
 	public int entradasRestantes() {
 		// TODO Auto-generated method stub
-		return  entradasDisponibles;
+		return  entRest;
 	}
 
-
-
+	public boolean isVenta() {
+		return venta;
+	}
 }

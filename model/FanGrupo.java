@@ -24,9 +24,9 @@ public class FanGrupo extends Thread {
 		Random random = new Random();
 		boolean seguirComprando = true;
 
-			while (entradasCompradas < EjemploTicketMaster.MAX_ENTRADAS_POR_FAN) {
+			while (entradasCompradas < EjemploTicketMaster.MAX_ENTRADAS_POR_FAN && seguirComprando) {
 				try {
-					seguirComprando = true;
+
 						System.out.println("[Fan " + numeroFan + "] Intentando comprar una entrada...");
 						boolean exito = webCompra.comprarEntrada();
 
@@ -38,7 +38,8 @@ public class FanGrupo extends Thread {
 							synchronized (webCompra){
 							System.out.println("[Fan " + numeroFan + "] No hay más entradas disponibles. Dejando de intentar.");
 							webCompra.wait();
-							seguirComprando = false;
+							if (webCompra.isVenta()){
+							seguirComprando = false;}
 							}
 
 						}

@@ -35,7 +35,7 @@ public class PromotoraConciertos extends Thread {
 						int entradasAReponer = Math.min(EjemploTicketMaster.REPOSICION_ENTRADAS, entradasRestantes);
 						webCompra.reponerEntradas(entradasAReponer);
 						System.out.println("[Promotora] Entradas repuestas: " + entradasAReponer +
-								". Total actual en la web: " + webCompra.entradasRestantes());
+								". Total actual en la web: " + webCompra.entradasDisponibles);
 						webCompra.notifyAll();
 					}
 
