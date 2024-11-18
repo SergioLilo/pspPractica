@@ -36,9 +36,10 @@ public class PromotoraConciertos extends Thread {
 						webCompra.reponerEntradas(entradasAReponer);
 						System.out.println("[Promotora] Entradas repuestas: " + entradasAReponer +
 								". Total actual en la web: " + webCompra.entradasRestantes());
+						webCompra.notifyAll();
 					}
 
-					webCompra.notifyAll();
+
 
 				}
 				if (continuarReponiendo) {

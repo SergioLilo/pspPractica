@@ -16,7 +16,7 @@ public class EjemploTicketMaster {
 	public static int REPOSICION_ENTRADAS = 2;
 
 	// El número máximo de entradas por fan
-	public static int MAX_ENTRADAS_POR_FAN = 10;
+	public static int MAX_ENTRADAS_POR_FAN = 2;
 
 	// El número total de fans
 	public static int NUM_FANS = 5;

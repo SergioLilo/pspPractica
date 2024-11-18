@@ -24,7 +24,7 @@ public class FanGrupo extends Thread {
 		Random random = new Random();
 		boolean seguirComprando = true;
 
-			while ((entradasCompradas < EjemploTicketMaster.MAX_ENTRADAS_POR_FAN) && seguirComprando) {
+			while (entradasCompradas < EjemploTicketMaster.MAX_ENTRADAS_POR_FAN) {
 				try {
 					seguirComprando = true;
 						System.out.println("[Fan " + numeroFan + "] Intentando comprar una entrada...");
