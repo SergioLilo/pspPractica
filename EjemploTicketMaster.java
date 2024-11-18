@@ -35,7 +35,6 @@ public class EjemploTicketMaster {
 			fans.add(fan);
 			fan.start();
 		}
-
 		//Lanzamos al promotor para que empiece a reponer entradas
 		liveNacion.start();
 
